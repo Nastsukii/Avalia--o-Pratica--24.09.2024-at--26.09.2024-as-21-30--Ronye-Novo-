@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Avaliação Pratica</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    
+        <header>
+            <h1> Bem vindo ao site de Avaliação Pratica</h1>
+            <nav>
+                <input type="checkbox" id="menu-toggle" onclick="menuStart()">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul class="menu">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Pages/galeria/galeria.html">Galeria</a></li>
+                    <li><a href="./Pages/clientes/clientes.html">Clientes</a></li>
+                    <li><a href="./Pages/contatos/contato.html">Contatos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <div class="container">
+        <section>
+            <div class="carrosel">
+                <div class="carrosel-imgs">
+                    <img src="./assets/imagem1.jpg" alt="imagem 1">
+                    <img src="./assets/imagem2.jpg" alt="imagem 2">
+                    <img src="./assets/imagem3.jpg" alt="imagem 3">
+                </div>
+                    <button class="back" onclick="moveCarrosel(-1)" >❮</button>
+                    <button class="next" onclick="moveCarrosel(1)">❯</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>© 2024 Team Lacb</p>
+    </footer>
+
+    <script src="./scripts.js"></script>
+</body>
+</html>

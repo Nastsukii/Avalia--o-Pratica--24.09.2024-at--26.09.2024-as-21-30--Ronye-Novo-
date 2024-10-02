@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+	line-height: 1.6;
+	display: flex;
+	height: 100vh; /* Ocupa espaço inteiro da tela */
+	flex-direction: column;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.container {
+	flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+}
+
+/*--- CSS DO CARROSSEL ---*/
+.carousel {
+    position: relative;
+    max-width: 960px;
+	height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+	max-width: 100%;
+    object-fit: cover; /* Garante que a imagem não será cortada */
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+	width: 40px;
+	height: 40px;
+}
+
+.carousel button.prev {
+    left: 10px;
+}
+
+.carousel button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%; /* Aumenta a largura máxima para 100% em telas menores */
+		height: auto;
+    }	
+	
+}
+

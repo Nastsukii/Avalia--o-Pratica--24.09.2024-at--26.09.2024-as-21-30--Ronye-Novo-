@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background-color: #e0ddff;
+    line-height: 1.6;
+    display: flex;
+	height: 100vh; 
+    flex-direction: column;
+}
+
+
+header{
+    background-color: #333;
+    color: #dad7f8;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+nav{
+    margin-left: 20% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+ul.menu{
+    list-style: none;
+    display: flex;
+    gap: 150px;
+}
+
+ul.menu li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+ul.menu li a:hover{
+    background-color:  #555;
+    border-radius: 4px;
+}
+
+.menu-icon{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color:#ffffff;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.container{
+    flex: 1;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+
+.carrosel{
+    position: relative;
+    max-width: 960px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrosel-imgs{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrosel-imgs img{
+    max-width: 100%;
+    
+    object-fit: cover;
+}
+
+.carrosel button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+	width: 40px;
+	height: 40px;
+}
+
+.carrosel button.back{
+    left: 10px;
+}
+
+.carrosel button.next{
+    right: 10px;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px){
+    .menu-icon{
+        display: block;
+        margin-left:600px ;
+    }
+
+    nav{
+        margin-left: 0;
+    }
+    ul.menu{
+       display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    input#menu-toggle:checked + .menu-icon + ul.menu{
+        display: flex;
+    }
+
+    ul.menu li{
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .carrosel{
+        max-width: 100%;
+        height: auto;
+    }
+}
