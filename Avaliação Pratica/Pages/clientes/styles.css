@@ -5,9 +5,11 @@
     font-family: "Roboto", system-ui;
 }
 
+
+
 header {
-    background-color: pink;
-    color: black;
+    background-color: rgb(51, 47, 47);
+    color: #e0ddff;
     padding: 10px 0;
     text-align: center;
     width: 100vw;
@@ -26,6 +28,7 @@ nav {
     align-items: center;
     padding: 0 20px;
     position: relative;
+    
 }
 
 ul.menu {
@@ -35,7 +38,7 @@ ul.menu {
 }
 
 ul.menu li a {
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
@@ -68,15 +71,16 @@ body {
     font-family: Arial, sans-serif;
     /* Fonte padrão */
     margin: 0;
-    padding: 20px;
+    background-color: #e0ddff;
 }
 
 section {
     max-width: 800px; /* Limita a largura da seção */
     margin: auto; /* Centraliza a seção na página */
-    background-color: rgba(128, 128, 128, 0.5); /* Fundo cinza com 50% de opacidade */
+    background-color: rgba(51, 47, 47, 0.5); /* Fundo cinza com 50% de opacidade */
     padding: 20px; /* Espaçamento interno */
     border-radius: 8px; /* Bordas arredondadas */
+    margin-top: 30px;
 }
 
 .part-section {
@@ -98,7 +102,16 @@ section {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1017px) {
+    .part-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    img{
+        margin-top: 20px;
+    }
+
     .menu-icon {
         display: block;
         margin-left: 90%;
