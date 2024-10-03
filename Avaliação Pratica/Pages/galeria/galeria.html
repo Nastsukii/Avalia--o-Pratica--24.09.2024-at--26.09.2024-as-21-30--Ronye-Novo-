@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria da Cafeteria</title>
+    <header>
+        <h1> Bem vindo ao site de Avaliação Pratica</h1>
+        <nav>
+            <input type="checkbox" id="menu-toggle" onclick="menuStart()">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="../../index.html">Home</a></li>
+               <li><a href="./galeria.html">galeria</a></li>
+                <li><a href="../clientes/clientes.html">Clientes</a></li>
+                <li><a href="../contatos/contato.html">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <style>
+        
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+           
+            align-items: center;
+            flex-direction: column;
+            background-color: #e0ddff;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+        .gallery img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery img:active{
+            align-items: center;
+            width: 35vw;
+            height: 35vh;
+        }
+
+        
+  
+
+
+body{
+    background-color: #e0ddff;
+    line-height: 1.6;
+    display: flex;
+	height: 100vh; 
+    flex-direction: column;
+}
+
+
+header{
+    background-color: #333;
+    color: #dad7f8;
+    padding: 10px 0;
+    text-align: center;
+    width: 100vw;
+   
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+nav{
+    margin-left: 20% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+ul.menu{
+    list-style: none;
+    display: flex;
+    gap: 150px;
+}
+
+ul.menu li a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+ul.menu li a:hover{
+    background-color:  #555;
+    border-radius: 4px;
+}
+
+.menu-icon{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color:#ffffff;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.container{
+    flex: 1;
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+@media (max-width: 1050px){
+  .menu-icon{
+      display: block;
+      margin-left:90% ;
+  }
+
+  .gallery{
+    display: flex;
+    flex-direction: column;
+  }    
+
+  nav{
+      margin-left: 0;
+  }
+
+  ul.menu{
+     display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 0;
+      gap: 15px;
+  }
+
+  input#menu-toggle:checked + .menu-icon + ul.menu{
+      display: flex;
+  }
+
+  ul.menu li{
+      text-align: center;
+      padding: 10px 0;
+  }
+}
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Galeria de Cafeteria</h1>
+    <div class="gallery">
+        <img src="https://imgs.search.brave.com/oQHxYPDcWOzpdffGwHS41UYi6DfXmRJUsK5Ls_E7QzU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ0/Mjg3Mzk0L3B0L2Zv/dG8vY2glQzMlQTF2/ZW5hLWRlLWNhZiVD/MyVBOS1jb20tdHJh/JUMzJUE3YWRvLWRl/LXJlY29ydGUuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUVL/Mi1KMVo5eEFoWEZq/SEg5UlUxV1haTTVG/OWdNRlYzdlpWODdS/S3A5d2c9" alt="Café 1">
+        <img src="https://imgs.search.brave.com/5AFPvqEvhF1uzFRAavrDzBM5TrMSzB_1yiy8gnsSfys/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQw/MDE5NDk5My9wdC9m/b3RvL2NhcHB1Y2Np/bm8tYXJ0LmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz0xM1JF/Wk96LWF1bDFYNnBH/M2JOWldsNW93aF9S/SDNzMmpkWHFkN2k1/eEw0PQ" alt="Café 2">
+        <img src="https://imgs.search.brave.com/V-P8PlxQFkE0i5uVUsTCeOm3vuNEyC0eauwzAcIjewg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIw/MjM1MTE1Ny9wdC92/ZXRvcmlhbC9jb2Zm/ZWUtYmVhbnMtYmFj/a2dyb3VuZC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9cVBt/V1JaT2pWY2p4MjJT/TzJkR3p6Y2w5NFBa/S0JfVTJWVXpsQVBh/czVsVT0" alt="Café 3">
+        <img src="https://imgs.search.brave.com/E420liTBoq_FQadElPDp7xidLdfyvxJxB-MtLCer1BY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/NTUxMTQ1NC9wdC9m/b3RvL2JhcmlzdGEt/cG91cmluZy1sYXR0/ZS1hcnQtcGhvdG9n/cmFwaHkuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW9CaWNN/Unp6eXZSLXpscTdK/WGtBUkxvRVZudVVF/blhEcDA4QTlIZTBB/UDQ9" alt="Café 4">
+        <img src="https://imgs.search.brave.com/1v8JGjCEBmvXULPfXV6BgUrKWHyNg43lmFoYZTzKIe8/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/MTM4NjE2Ny9wdC9m/b3RvL2NvZmZlZS5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/Rl9STXB5VUhXeUhp/MjljdVM0NzhUdW5U/NmkwaWpJVktaOXk5/eVpNT2dLbz0" alt="Café 5">
+        <img src="https://imgs.search.brave.com/5bhzsYztl-mMkb-ZJfbfhX8fByioilUZmysKV6hgUjA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YWJyYWhhby5jb20u/YnIvYmFzZS8zMDIv/YWMyLzAyMi9kZWNv/cmFjYW8tY2FmZXRl/cmlhLXZlcm1lbGhh/LmpwZw  " alt="Café 6">
+    </div>
+</body>
+</html>

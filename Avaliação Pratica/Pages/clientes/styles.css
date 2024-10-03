@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", system-ui;
+}
+
+header {
+    background-color: pink;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    width: 100vw;
+    height: 113px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+nav {
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 150px;
+}
+
+ul.menu li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+ul.menu li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+    margin: 0;
+    padding: 20px;
+}
+
+section {
+    max-width: 800px; /* Limita a largura da seção */
+    margin: auto; /* Centraliza a seção na página */
+    background-color: rgba(128, 128, 128, 0.5); /* Fundo cinza com 50% de opacidade */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.part-section {
+    display: flex; /* Usa flexbox para criar colunas */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Espaça os itens ao longo da linha */
+    margin-top: 20px; /* Espaçamento acima da seção */
+}
+
+.textodop {
+    flex: 1; /* Permite que o texto ocupe o espaço disponível */
+    margin-right: 20px; /* Espaçamento à direita do texto */
+}
+
+.imagemdop {
+    width: 300px; /* Define uma largura fixa para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        margin-left: 90%;
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    ul.menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    input#menu-toggle:checked+.menu-icon+ul.menu {
+        display: flex;
+    }
+
+    ul.menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
